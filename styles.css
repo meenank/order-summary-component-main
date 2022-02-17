@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+body {
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+:root {
+    /* primary */
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    /* ### Neutral */
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+
+/* for mobile version */
+
+body {
+    background-image: url(/images/pattern-background-mobile.svg);
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+.card {
+    /* border: 1px solid red; */
+    max-width: 90%;
+    margin: 8vh auto;
+    border-radius: 1.5rem;
+    background-color: white;
+    box-shadow: -2px 10px 67px -15px rgba(26, 23, 38, 0.75);
+    -webkit-box-shadow: -2px 10px 67px -15px rgba(26, 23, 38, 0.75);
+    -moz-box-shadow: -2px 10px 67px -15px rgba(26, 23, 38, 0.75);
+}
+
+.card .main-image {
+    width: 100%;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+}
+
+.main-heading {
+    font-weight: 900;
+    font-size: 1.7em;
+    text-align: center;
+    color: var(--Dark-blue);
+}
+
+.para {
+    /* border: 1px solid brown; */
+    color: var(--Desaturated-blue);
+    text-align: center;
+    max-width: 80%;
+    margin: auto;
+    font-size: 1em;
+    line-height: 1.6em;
+}
+
+.card .price-container {
+    /* border: 1px solid blue; */
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: repeat(2, 1fr);
+    margin: 3rem auto;
+    width: 80%;
+}
+
+.card .price-container .music-image {
+    /* border: 1px solid brown; */
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+
+.card .price-container .p1 {
+    margin: 0;
+    /* border: 1px solid brown; */
+    grid-column: 2/3;
+    /* grid-row: 1/2; */
+    width: 100%;
+    font-weight: 900;
+}
+
+.card .price-container .p2 {
+    margin: 0;
+    color: var(--Desaturated-blue);
+    /* border: 1px solid brown; */
+    grid-column: 2/3;
+    /* grid-row: 2/3; */
+    /* align-self: center; */
+}
+
+.card .price-container .change {
+    /* border: 1px solid brown; */
+    grid-column: 3/4;
+    grid-row: 1/3;
+    align-self: center;
+    color: var(--Bright-blue);
+    font-weight: 700;
+}
+
+.card .price-container .change:hover,
+.card .price-container .change:active {
+    color: var(--Desaturated-blue);
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.card .proceed {
+    display: block;
+    margin: auto;
+    width: 85%;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: .8rem;
+    outline: none;
+    border: none;
+    background-color: var(--Bright-blue);
+    color: white;
+    font-size: 1em;
+    font-weight: 800;
+    box-shadow: 3px 9px 31px 3px rgba(70, 40, 179, 0.75);
+    -webkit-box-shadow: 3px 9px 31px 3px rgba(70, 40, 179, 0.75);
+    -moz-box-shadow: 3px 9px 31px 3px rgba(70, 40, 179, 0.75);
+}
+
+.card .proceed:hover,
+.card .proceed:active {
+    background-color: var(--Desaturated-blue);
+    transition: 0.7s;
+}
+
+.card .cancel {
+    margin: auto;
+    padding: 2rem;
+    display: block;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 1em;
+    font-weight: 700;
+    color: var(--Desaturated-blue);
+    cursor: pointer;
+}
+
+.card .cancel:hover,
+.card .cancel:active {
+    color: black;
+}
+
+
+/* for desktop version */
+
+@media (min-width: 400px) {
+    body {
+        background-image: url(/images/pattern-background-desktop.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .card {
+        margin-top: 50px;
+        width: 410px;
+    }
+}
